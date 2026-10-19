@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="15.0" styleClass="quiz-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ee.voco.quiz.view.QuizOverviewController">
+    <padding>
+        <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+    </padding>
+    <children>
+        <Label fx:id="questionNumberLabel" styleClass="question-number" text="Küsimus 1 / 5" />
+        <ProgressBar fx:id="progressBar" prefWidth="500.0" progress="0.2" />
+
+        <VBox fx:id="questionArea" spacing="15.0">
+            <children>
+                <Label fx:id="questionLabel" styleClass="question-label" text="Küsimuse tekst" wrapText="true" />
+                <VBox spacing="10.0">
+                    <children>
+                        <RadioButton fx:id="opt1Radio" styleClass="option-radio" text="Variant 1">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="optionsGroup" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="opt2Radio" styleClass="option-radio" text="Variant 2" toggleGroup="$optionsGroup" />
+                        <RadioButton fx:id="opt3Radio" styleClass="option-radio" text="Variant 3" toggleGroup="$optionsGroup" />
+                        <RadioButton fx:id="opt4Radio" styleClass="option-radio" text="Variant 4" toggleGroup="$optionsGroup" />
+                    </children>
+                    <padding>
+                        <Insets left="10.0" top="10.0" />
+                    </padding>
+                </VBox>
+                <Button onAction="#handleNextQuestion" styleClass="primary-button" text="Järgmine" />
+            </children>
+        </VBox>
+
+        <VBox fx:id="resultArea" alignment="CENTER" managed="false" spacing="15.0" visible="false">
+            <children>
+                <Label styleClass="result-title" text="Quiz lõpetatud!" />
+                <Label fx:id="scoreLabel" styleClass="result-score" text="Tulemus: 0 / 0" />
+                <Label fx:id="percentageLabel" styleClass="result-percentage" text="Õigeid vastuseid: 0%" />
+                <Button onAction="#handleRestart" styleClass="primary-button" text="Alusta uuesti" />
+            </children>
+        </VBox>
+    </children>
+</VBox>

@@ -1,0 +1,55 @@
+.quiz-container {
+    -fx-background-color: #f4f6f9;
+}
+
+.question-number {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6c757d;
+    -fx-font-weight: bold;
+}
+
+.question-label {
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.option-radio {
+    -fx-font-size: 15px;
+    -fx-text-fill: #34495e;
+}
+
+.primary-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 20px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.result-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27ae60;
+}
+
+.result-score {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.result-percentage {
+    -fx-font-size: 16px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: #3498db;
+}
